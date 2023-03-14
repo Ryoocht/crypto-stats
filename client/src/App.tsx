@@ -1,19 +1,9 @@
 import { Button, TextField } from '@mui/material'
 import './index.css'
+import LoginForm from './components/auth/login-form'
 
 const App = () => {
-  return (
-    <div className='flex justify-center items-center flex-col h-screen gap-8'>
-      <h1 className='text-6xl'>Crypto Stats</h1>
-      <div className='flex flex-col gap-2'>
-        <TextField label='Email' className='w-80' type='email' required />
-        <TextField label='Password' className='w-80' type='passowrd' required />
-      </div>
-      <Button variant='contained' className='w-80'>
-        <span className='p-1'>Login</span>
-      </Button>
-    </div>
-  )
+  return <LoginForm />
 }
 
 export default App
