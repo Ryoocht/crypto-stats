@@ -1,58 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import { Button, TextField } from '@mui/material'
+import './index.css'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+    <div className='flex justify-center items-center flex-col h-screen gap-8'>
+      <h1 className='text-6xl'>Crypto Stats</h1>
+      <div className='flex flex-col gap-2'>
+        <TextField label='Email' className='w-80' type='email' required />
+        <TextField label='Password' className='w-80' type='passowrd' required />
+      </div>
+      <Button variant='contained' className='w-80'>
+        <span className='p-1'>Login</span>
+      </Button>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
